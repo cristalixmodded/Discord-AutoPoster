@@ -55,7 +55,7 @@ while True:
             time.sleep(10)
             sended_message_json = json.loads(sended_message.replace('\\', ''))
             bot.deleteMessage(channelID=channel_ID, messageID=sended_message_json['id'])
-            time.sleep(random.randint(self.MIN_delay, self.MAX_delay))
+            time.sleep(random.randint(MIN_delay, MAX_delay))
         else:
             wait = message_time - time_now + timedelta(minutes=10)
             time.sleep(wait.total_seconds())
